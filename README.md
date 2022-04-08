@@ -1,4 +1,4 @@
-# Simple tool for remove background | Python
+# Tool for remove background | U2NET, TRACER
 
 
 <h2>Quick Start</h2>

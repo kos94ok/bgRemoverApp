@@ -11,3 +11,20 @@ Install with
 ```python 
 pip install bgRemoverApp
 ```
+
+Code demo
+
+```python 
+
+from PIL import Image
+import bgRemoverApp
+
+# './ckpt/TRACER-Efficient-7.pth'
+model_path = './ckpt/u2net.pth'
+input_image = Image.open('./input.jpg')
+
+# U2NET, TRACER
+output_image = bgRemoverApp.remove_bg(input_image, "U2NET", model_path)
+output_image.save('output.png')
+
+```

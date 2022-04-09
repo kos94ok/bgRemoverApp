@@ -19,12 +19,12 @@ Code demo
 from PIL import Image
 import bgRemoverApp
 
-# './ckpt/TRACER-Efficient-7.pth'
-model_path = './ckpt/u2net.pth'
+model_name = "U2NET" # U2NET, TRACER
+model_path = './ckpt/u2net.pth' # './ckpt/TRACER-Efficient-7.pth'
 input_image = Image.open('./input.jpg')
 
-# U2NET, TRACER
-output_image = bgRemoverApp.remove_bg(input_image, "U2NET", model_path)
+model_pred = bgRemoverApp.load_model(model_name, model_path)
+output_image = bgRemoverApp.remove_bg(input_image, model_name, model_pred)
 output_image.save('output.png')
 
 ```
